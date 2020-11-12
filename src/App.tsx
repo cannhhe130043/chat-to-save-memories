@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
+import { ChatBox, InputMessage } from './components'
 
-function App() {
+const Container = styled.div`
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+`
+
+const Title = styled.h1`
+  margin: auto;
+  color: pink;
+  display: inline-block;
+  font-size: 4vw;
+  font-weight: 800;
+`
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <Title>Chat to save memories</Title>
+      <ChatBox />
+      <InputMessage />
+    </Container>
+  )
 }
-
-export default App;
